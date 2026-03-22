@@ -1,7 +1,6 @@
 cat <<EOF > README.md
 # Student Feedback - DEVOPS CA2
 
-Automation project for a student feedback form using HTML/JS, Selenium, and Jenkins.
 
 ### Stack:
 - **Frontend:** HTML/CSS/JS (with validation)
