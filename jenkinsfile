@@ -1,0 +1,27 @@
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // This pulls your code from the folder
+                echo 'Checking out source code...'
+            }
+        }
+        stage('Run Selenium Tests') {
+            steps {
+                // This runs your JAR exactly like your batch command
+                bat 'java -jar form-test.jar'
+            }
+        }
+    }
+    post {
+        success {
+            echo 'Test Suite Passed Successfully!'
+        }
+        failure {
+            echo 'Test Suite Failed. Check the Console Output.'
+        }
+    }
+}
