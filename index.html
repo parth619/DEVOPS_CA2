@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Internal CSS requirement */
+        body { background-color: #f4f7f6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Feedback Registration</h2>
+        <form id="feedbackForm">
+            <input type="text" id="studentName" placeholder="Student Name" required>
+            <input type="email" id="emailId" placeholder="Email ID" required>
+            <input type="text" id="mobileNumber" placeholder="Mobile Number" required>
+            
+            <select id="department">
+                <option value="">Select Department</option>
+                <option value="CS">Computer Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="EE">Electrical Engineering</option>
+            </select>
+
+            <div class="gender-section">
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="Male" id="male"> Male
+                <input type="radio" name="gender" value="Female" id="female"> Female
+            </div>
+
+            <textarea id="comments" placeholder="Feedback Comments (Min 10 words)" rows="4"></textarea>
+            
+            <div class="btn-group">
+                <button type="submit" id="submitBtn">Submit</button>
+                <button type="reset" id="resetBtn">Reset</button>
+            </div>
+            <p id="error-message" style="color:red;"></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
